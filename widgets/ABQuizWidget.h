@@ -13,7 +13,7 @@
  ABQuizWidget - Quiz widget allows apps to create multiple choice quizes
  and dynamically change them from the WidgetBoost.com's dashboard.
  */
-@interface ABQuizWidget : ABWidget
+@interface ABQuizWidget : ABWidget<NSXMLParserDelegate>
 
 -(void) load:(NSString*)widgetKey;
 @property (retain,strong) NSMutableArray* quizes;

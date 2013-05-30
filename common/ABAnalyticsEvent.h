@@ -15,5 +15,8 @@
 
 @property (nonatomic, strong) NSString* category;
 @property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSString* eventID;
+
++ (ABAnalyticsEvent *)createWithEventName:(NSString *)eventName category:(NSString *)category;
 
 @end

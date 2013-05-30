@@ -16,6 +16,6 @@
 @interface ABMemoryGameWidget : ABWidget
 
 -(void) load:(NSString*)widgetKey;
-@property (retain,strong) NSMutableArray* images;
+@property (retain,strong) NSMutableArray* imagesArray;
 
 @end

@@ -13,7 +13,7 @@
  ABCatalogWidget - Catalog widget allows apps to create product catalogs
  and dynamically change them from the WidgetBoost.com's dashboard.
  */
-@interface ABCatalogWidget : ABWidget
+@interface ABCatalogWidget : ABWidget<NSXMLParserDelegate>
 
 -(void) load:(NSString*)widgetKey;
 @property (retain,strong) NSMutableArray* categories;

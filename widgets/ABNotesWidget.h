@@ -13,7 +13,7 @@
  ABNotesWidget - Notes widget allows apps to create flash cards
  and dynamically change them from the WidgetBoost.com's dashboard.
  */
-@interface ABNotesWidget : ABWidget
+@interface ABNotesWidget : ABWidget<NSXMLParserDelegate>
 
 -(void) load:(NSString*)widgetKey;
 @property (retain,strong) NSMutableArray* categories;

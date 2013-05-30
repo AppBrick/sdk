@@ -19,7 +19,7 @@
 -(void) signupFailed:(NSString*)message;
 @end
 
-@interface ABMembershipService : NSObject
+@interface ABMembershipService : NSObject<NSXMLParserDelegate>
 {
     id <ABMembershipServiceDelegate> delegate;
 }

@@ -12,7 +12,7 @@
 /**
  ABQuiz - quiz object
  */
-@interface ABQuiz : ABBase
+@interface ABQuiz : ABBase<NSXMLParserDelegate>
 
 -(void) report;
 

@@ -13,7 +13,7 @@
  ABFilesWidget - File widget allows apps to get collection of files and dynamically
  change them from the WidgetBoost.com's dashboard.
  */
-@interface ABFilesWidget : ABWidget
+@interface ABFilesWidget : ABWidget<NSXMLParserDelegate>
 
 -(void) load:(NSString*)widgetKey;
 @property (retain,strong) NSMutableArray* categories;

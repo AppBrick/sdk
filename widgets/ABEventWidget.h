@@ -14,7 +14,7 @@
  ABEventWidget - Event widget allows apps to get collection of events and dynamically
  change the collection from the WidgetBoost.com's dashboard.
  */
-@interface ABEventWidget : ABWidget
+@interface ABEventWidget : ABWidget<NSXMLParserDelegate>
 
 @property (retain,strong) NSMutableArray* events;
 

@@ -13,7 +13,7 @@
  */
 @interface ABPushNotifyService : ABBase
 
-@property (nonatomic, strong) NSString* deviceToken;
+//@property (nonatomic, strong) NSString* deviceToken;
 
 + (ABPushNotifyService*) shared;
 

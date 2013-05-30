@@ -13,7 +13,7 @@
  ABQuestionnaireWidget - Questionnaire widget allows apps to create questionnaires
  and dynamically change them from the WidgetBoost.com's dashboard.
  */
-@interface ABQuestionnaireWidget : ABWidget
+@interface ABQuestionnaireWidget : ABWidget<NSXMLParserDelegate>
 
 -(void) load:(NSString*)widgetKey;
 @property (retain,strong) NSMutableArray* quizes;

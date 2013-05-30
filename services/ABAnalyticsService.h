@@ -23,14 +23,4 @@
  */
 - (void)postevent:(NSString*)category eventName:(NSString*)name;
 
-
-/**
- Private functions - Apps should not call these
- */
-
-- (void) start;
-- (void) stop;
-
-//Private functions -end
-
 @end

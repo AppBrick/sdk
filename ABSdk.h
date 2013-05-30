@@ -12,6 +12,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ABBase.h"
+#import "ABAnalyticsEvent.h"
 
 
 /**
@@ -22,23 +23,21 @@
 -(void) syncDone;
 @end
 
-@interface ABSdk : ABBase
+@interface ABSdk : ABBase<NSXMLParserDelegate>
 
 @property (nonatomic, strong) NSMutableArray* widgetsArray;
 @property (nonatomic, strong) NSMutableDictionary* widgetsMap;
 @property (nonatomic, strong) NSString* appKey;
-@property (nonatomic, strong) NSString* version;
-@property (nonatomic, strong) NSString* deviceId;
 
 + (ABSdk*) shared;
 
 /**
  init - This function initializes sdk
  App should call this function in appdelegate's function didFinishLaunchingWithOptions.
- @param appid - you can get the appid by creating the app on WidgetBoost.com
- Example: [[ABSdk shared] init:@"XXXXXXXXX"];
+ @param appKey - you can get the appKey by creating the app on WidgetBoost.com
+Example: [ABSdk init:@"XXXXXXXXX"];
  */
--(void) init:(NSString*)appKey appVersion:(NSString*)version;
++(void) init:(NSString*)appKey;
 
 /**
  startApp - This function registers and starts the app session.
@@ -71,5 +70,9 @@
  Example: [[ABSdk shared] loadWidgetLayer];
  */
 -(void) loadWidgetLayer;
+
+
+
+- (void)postEvent:(ABAnalyticsEvent *)event;
 
 @end

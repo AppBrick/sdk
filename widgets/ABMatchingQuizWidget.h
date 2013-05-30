@@ -13,7 +13,7 @@
  ABMatchingQuizWidget - Matching quiz widget allows apps to create matching quiz 
  games and dynamically change them from the WidgetBoost.com's dashboard.
  */
-@interface ABMatchingQuizWidget : ABWidget
+@interface ABMatchingQuizWidget : ABWidget<NSXMLParserDelegate>
 
 -(void) load:(NSString*)widgetKey;
 @property (retain,strong) NSMutableArray* matchpairs;

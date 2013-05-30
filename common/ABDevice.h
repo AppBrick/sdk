@@ -12,7 +12,6 @@
  ABDevice - Interface contains device properties.
  */
 @interface ABDevice : NSObject
-
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* model;
 @property (nonatomic, strong) NSString* os;
@@ -21,4 +20,10 @@
 @property (nonatomic, strong) NSString* ipAddress;
 @property (nonatomic, strong) NSString* deviceId;
 @property (nonatomic, assign) int status;
+
++(ABDevice *)shared;
+- (NSDictionary *) getDeviceDataDictionary;
+- (NSString *)getIPAddress;
+
+
 @end
